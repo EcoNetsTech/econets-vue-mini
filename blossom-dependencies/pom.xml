@@ -133,6 +133,11 @@
                 <artifactId>blossom-spring-boot-starter-captcha</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-websocket</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <!-- Spring 核心 -->
             <dependency>

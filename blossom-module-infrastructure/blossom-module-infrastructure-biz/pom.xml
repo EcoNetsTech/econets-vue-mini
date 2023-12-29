@@ -85,6 +85,10 @@
             <groupId>cn.econets.boot</groupId>
             <artifactId>blossom-spring-boot-starter-biz-operatelog</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.econets.boot</groupId>
+            <artifactId>blossom-spring-boot-starter-websocket</artifactId>
+        </dependency>
 
     </dependencies>
 </project>

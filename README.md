@@ -10,7 +10,7 @@
 
 快速开发平台，全部开源，个人与企业可 100% 免费使用。
 
-* Java 后端：`master` 分支为 JDK 8 + Spring Boot 2.7.17，`master-jdk21` 分支为 JDK21 + Spring Boot 3.2.0
+* Java 后端：`master/mini-2.x` 分支为 JDK 8 + Spring Boot 2.7.17，`mini-3.x` 分支为 JDK21 + Spring Boot 3.2.0
 * 管理后台的电脑端：Vue3 提供 `econets-ui-admin-vue3`版本
 * 后端采用 Spring Boot 多模块架构、MySQL + MyBatis Plus、Redis + Redisson
 * 数据库可使用 MySQL、Oracle、PostgreSQL、SQL Server、MariaDB、国产达梦 DM、TiDB 等
@@ -30,6 +30,7 @@
 | 项目                                                              | Star                                                                                                                                                                                                                                                                                             | 简介                          |
 |-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
 | [econets-vue](https://github.com/EcoNetsTech/econets-vue)  | [![GitHub stars](https://img.shields.io/github/stars/EcoNetsTech/econets-vue.svg?style=social&label=Stars)](https://github.com/EcoNetsTech/econets-vue)       | 基于 Spring Boot 多模块架构        |
+| [econets-vue-mini](https://github.com/EcoNetsTech/econets-vue-mini)  | [![GitHub stars](https://img.shields.io/github/stars/EcoNetsTech/econets-vue-mini.svg?style=social&label=Stars)](https://github.com/EcoNetsTech/econets-vue-mini)       | 基于 Spring Boot 多模块架构 mini版        |
 
 ### 前端项目
 
@@ -44,8 +45,8 @@
 
 【完整版】包括系统功能、基础设施、会员中心、数据报表、工作流程、商城系统、微信公众号、CRM 等功能
 
-* JDK 8 + Spring Boot 2.7.17 版本：<https://github.com/EcoNetsTech/econets-vue> 的 `master` 分支
-* JDK 21 + Spring Boot 3.2.0 版本：<https://github.com/EcoNetsTech/econets-vue> 的 `master-jdk21` 分支
+* JDK 8 + Spring Boot 2.7.17 版本：<https://github.com/EcoNetsTech/econets-vue> 的 `master/2.x` 分支
+* JDK 21 + Spring Boot 3.2.0 版本：<https://github.com/EcoNetsTech/econets-vue> 的 `3.x` 分支
 
 两个分支的功能是一致的，可以放心使用！
 
@@ -53,7 +54,8 @@
 
 【精简版】只包括系统功能、基础设施功能，不包括会员中心、数据报表、工作流程、商城系统、微信公众号、CRM 等功能
 
-* JDK 8 + Spring Boot 2.7.17 版本：<https://github.com/EcoNetsTech/econets-vue> 的 `mini-2.x` 分支
+* JDK 8 + Spring Boot 2.7.17 版本：<https://github.com/EcoNetsTech/econets-vue-mini > 的 `master/mini-2.x` 分支
+* JDK 21 + Spring Boot 3.2.0 版本：<https://github.com/EcoNetsTech/econets-vue-mini > 的 `mini-3.x` 分支
 
 ## 开源协议
 
@@ -108,18 +110,6 @@
 | 🚀  | 敏感词   | 配置系统敏感词，支持标签分组                  |
 | 🚀  | 应用管理  | 管理 SSO 单点登录的应用，支持多种 OAuth2 授权方式 |
 | 🚀  | 地区管理  | 展示省份、城市、区镇等城市信息，支持 IP 对应城市      |
-
-### 工作流程
-
-|     | 功能    | 描述                                     |
-|-----|-------|----------------------------------------|
-| 🚀  | 流程模型  | 配置工作流的流程模型，支持文件导入与在线设计流程图，提供 7 种任务分配规则 |
-| 🚀  | 流程表单  | 拖动表单元素生成相应的工作流表单，覆盖 Element UI 所有的表单组件 |
-| 🚀  | 用户分组  | 自定义用户分组，可用于工作流的审批分组                    |
-| 🚀  | 我的流程  | 查看我发起的工作流程，支持新建、取消流程等操作，高亮流程图、审批时间线    |
-| 🚀  | 待办任务  | 查看自己【未】审批的工作任务，支持通过、不通过、转发、委派、退回等操作    |
-| 🚀  | 已办任务  | 查看自己【已】审批的工作任务，未来会支持回退操作               |
-| 🚀  | OA 请假 | 作为业务自定义接入工作流的使用示例，只需创建请求对应的工作流程，即可进行审批 |
 
 ### 支付系统
 
@@ -176,7 +166,7 @@
 | 🚀  | 菜单管理   | 自定义公众号的菜单，也可以从公众号同步菜单         |
 | 🚀  | 素材管理   | 管理公众号的图片、语音、视频等素材，支持在线播放语音、视频 |
 | 🚀  | 图文草稿箱  | 新增常用的图文素材到草稿箱，可发布到公众号         |
-| 🚀  | 图文发表记录 | 查看已发布成功的图文素材，支持删除操作    
+| 🚀  | 图文发表记录 | 查看已发布成功的图文素材，支持删除操作
 
 ### 商城系统
 
@@ -207,13 +197,7 @@ _前端基于 crmeb uniapp 经过授权重构，优化代码实现_
 | `blossom-framework`                                                        | Java 框架拓展          |
 | `blossom-server`                                                           | 管理后台 + 用户 APP 的服务端 |
 | `blossom-module-system`                                                    | 系统功能的 Module 模块    |
-| `blossom-module-member`                                                    | 会员中心的 Module 模块    |
 | `blossom-module-infrastructure`                                            | 基础设施的 Module 模块    |
-| `blossom-module-bpm`                                                       | 工作流程的 Module 模块    |
-| `blossom-module-pay`                                                       | 支付系统的 Module 模块    |
-| `blossom-module-mall`                                                      | 商城系统的 Module 模块    |
-| `blossom-module-mp`                                                        | 微信公众号的 Module 模块   |
-| `blossom-module-report`                                                    | 大屏报表 Module 模块     |
 
 ### 框架
 
