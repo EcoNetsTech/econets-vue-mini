@@ -12,10 +12,10 @@ public class MailAccountRespVO {
     @Schema(description = "编号", requiredMode = Schema.RequiredMode.REQUIRED, example = "1024")
     private Long id;
 
-    @Schema(description = "邮箱", requiredMode = Schema.RequiredMode.REQUIRED, example = "yudaoyuanma@123.com")
+    @Schema(description = "邮箱", requiredMode = Schema.RequiredMode.REQUIRED, example = "test@gmial.com")
     private String mail;
 
-    @Schema(description = "用户名", requiredMode = Schema.RequiredMode.REQUIRED, example = "yudao")
+    @Schema(description = "用户名", requiredMode = Schema.RequiredMode.REQUIRED, example = "test")
     private String username;
 
     @Schema(description = "密码", requiredMode = Schema.RequiredMode.REQUIRED, example = "123456")
