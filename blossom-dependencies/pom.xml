@@ -115,7 +115,22 @@
             </dependency>
             <dependency>
                 <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-test</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>yudao-spring-boot-starter-desensitize</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
                 <artifactId>blossom-spring-boot-starter-biz-operatelog</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-biz-error-code</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
