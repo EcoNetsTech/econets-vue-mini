@@ -37,6 +37,10 @@
         </dependency>
         <dependency>
             <groupId>cn.econets.boot</groupId>
+            <artifactId>blossom-spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.econets.boot</groupId>
             <artifactId>blossom-spring-boot-starter-biz-tenant</artifactId>
         </dependency>
         <dependency>
@@ -71,14 +75,6 @@
         <dependency>
             <groupId>cn.econets.boot</groupId>
             <artifactId>blossom-spring-boot-starter-excel</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.econets.boot</groupId>
-            <artifactId>blossom-spring-boot-starter-biz-operatelog</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.econets.boot</groupId>
-            <artifactId>blossom-spring-boot-starter-biz-operatelog</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.econets.boot</groupId>
