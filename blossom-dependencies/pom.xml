@@ -95,11 +95,6 @@
             <!-- 业务组件 -->
             <dependency>
                 <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-banner</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
                 <artifactId>blossom-spring-boot-starter-captcha</artifactId>
                 <version>${revision}</version>
             </dependency>
@@ -120,17 +115,7 @@
             </dependency>
             <dependency>
                 <groupId>cn.econets.boot</groupId>
-                <artifactId>yudao-spring-boot-starter-desensitize</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
                 <artifactId>blossom-spring-boot-starter-biz-operatelog</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-biz-error-code</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -180,11 +165,11 @@
                 <version>${revision}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>cn.econets.boot</groupId>-->
-<!--                <artifactId>blossom-spring-boot-starter-websocket</artifactId>-->
-<!--                <version>${revision}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-websocket</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
@@ -254,11 +239,11 @@
             </dependency>
 
             <!-- Job 定时任务相关 -->
-<!--            <dependency>-->
-<!--                <groupId>cn.econets.boot</groupId>-->
-<!--                <artifactId>blossom-spring-boot-starter-job</artifactId>-->
-<!--                <version>${revision}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-job</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <!-- 消息队列相关 -->
             <dependency>
@@ -402,12 +387,6 @@
                 <version>${podam.version}</version>
             </dependency>
 
-            <!-- 工作流相关 -->
-<!--            <dependency>-->
-<!--                <groupId>cn.econets.boot</groupId>-->
-<!--                <artifactId>blossom-spring-boot-starter-flowable</artifactId>-->
-<!--                <version>${revision}</version>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>org.flowable</groupId>
                 <artifactId>flowable-spring-boot-starter-process</artifactId>

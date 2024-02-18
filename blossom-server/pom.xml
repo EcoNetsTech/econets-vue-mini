@@ -40,10 +40,6 @@
 
         <dependency>
             <groupId>cn.econets.boot</groupId>
-            <artifactId>blossom-spring-boot-starter-banner</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.econets.boot</groupId>
             <artifactId>blossom-spring-boot-starter-monitor</artifactId>
         </dependency>
 
