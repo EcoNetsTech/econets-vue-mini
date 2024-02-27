@@ -1,11 +1,11 @@
 package cn.econets.blossom.framework.apilog.config;
 
+import cn.econets.blossom.framework.common.enums.WebFilterOrderEnum;
 import cn.econets.blossom.framework.apilog.core.filter.ApiAccessLogFilter;
 import cn.econets.blossom.framework.apilog.core.service.ApiAccessLogFrameworkService;
 import cn.econets.blossom.framework.apilog.core.service.ApiAccessLogFrameworkServiceImpl;
 import cn.econets.blossom.framework.apilog.core.service.ApiErrorLogFrameworkService;
 import cn.econets.blossom.framework.apilog.core.service.ApiErrorLogFrameworkServiceImpl;
-import cn.econets.blossom.framework.common.enums.WebFilterOrderEnum;
 import cn.econets.blossom.framework.web.config.WebProperties;
 import cn.econets.blossom.module.infrastructure.api.logger.ApiAccessLogApi;
 import cn.econets.blossom.module.infrastructure.api.logger.ApiErrorLogApi;

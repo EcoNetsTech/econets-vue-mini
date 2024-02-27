@@ -64,7 +64,7 @@ public class CodegenBuilder {
      */
     public static final String TENANT_ID_FIELD = "tenantId";
     /**
-     * {@link cn.econets.blossom.framework.mybatis.core.dataobject.BaseDO} 的字段
+     * {@link BaseDO} 的字段
      */
     public static final Set<String> BASE_DO_FIELDS = new HashSet<>();
     /**
@@ -193,7 +193,7 @@ public class CodegenBuilder {
         }
         // name
         if (StrUtil.endWithIgnoreCase(column.getJavaField(), "name")) {
-            column.setExample(randomEle(new String[]{"张三", "李四", "王五", "赵六", "芋艿"}));
+            column.setExample(randomEle(new String[]{"张三", "李四", "王五", "赵六", "econets"}));
             return;
         }
         // status
@@ -203,7 +203,7 @@ public class CodegenBuilder {
         }
         // url
         if (StrUtil.endWithIgnoreCase(column.getColumnName(), "url")) {
-            column.setExample("https://www.iocoder.cn");
+            column.setExample("https://www.econets.cn");
             return;
         }
         // reason
