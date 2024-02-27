@@ -1,5 +1,6 @@
 package cn.econets.blossom.framework.web.core.handler;
 
+import cn.econets.blossom.framework.apilog.core.service.ApiErrorLogFrameworkService;
 import cn.econets.blossom.framework.common.exception.ServiceException;
 import cn.econets.blossom.framework.common.exception.enums.GlobalErrorCodeConstants;
 import cn.econets.blossom.framework.common.pojo.CommonResult;
@@ -7,8 +8,7 @@ import cn.econets.blossom.framework.common.util.json.JsonUtils;
 import cn.econets.blossom.framework.common.util.monitor.TracerUtils;
 import cn.econets.blossom.framework.common.util.servlet.ServletUtils;
 import cn.econets.blossom.framework.apilog.core.service.ApiErrorLog;
-import cn.econets.blossom.framework.apilog.core.service.ApiErrorLogFrameworkService;
-import cn.econets.blossom.framework.web.core.WebFrameworkUtils;
+import cn.econets.blossom.framework.web.core.util.WebFrameworkUtils;
 import cn.hutool.core.exceptions.ExceptionUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.StrUtil;
@@ -311,12 +311,6 @@ public class GlobalExceptionHandler {
             log.error("[商城系统 blossom-module-mall - 已禁用]");
             return CommonResult.error(GlobalErrorCodeConstants.NOT_IMPLEMENTED.getCode(),
                     "[商城系统 blossom-module-mall - 已禁用]");
-        }
-        // 5. 支付平台
-        if (message.contains("pay_")) {
-            log.error("[支付模块 blossom-module-pay - 表结构未导入]");
-            return CommonResult.error(GlobalErrorCodeConstants.NOT_IMPLEMENTED.getCode(),
-                    "[支付模块 blossom-module-pay - 表结构未导入]");
         }
         return null;
     }

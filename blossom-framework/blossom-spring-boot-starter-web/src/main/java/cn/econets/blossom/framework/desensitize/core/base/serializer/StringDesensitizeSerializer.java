@@ -1,12 +1,12 @@
 package cn.econets.blossom.framework.desensitize.core.base.serializer;
 
-import cn.econets.blossom.framework.desensitize.core.base.annotation.DesensitizeBy;
-import cn.econets.blossom.framework.desensitize.core.base.handler.DesensitizationHandler;
 import cn.hutool.core.annotation.AnnotationUtil;
 import cn.hutool.core.lang.Singleton;
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.econets.blossom.framework.desensitize.core.base.annotation.DesensitizeBy;
+import cn.econets.blossom.framework.desensitize.core.base.handler.DesensitizationHandler;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.BeanProperty;
 import com.fasterxml.jackson.databind.JsonSerializer;

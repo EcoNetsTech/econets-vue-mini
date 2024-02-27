@@ -12,7 +12,7 @@
     <description>基础 bom 文件，管理整个项目的依赖版本</description>
 
     <properties>
-        <revision>1.0.1</revision>
+        <revision>1.0.2</revision>
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <!-- 统一依赖管理 -->
         <spring.boot.version>2.7.17</spring.boot.version>
@@ -26,7 +26,7 @@
         <mybatis-plus-generator.version>3.5.4</mybatis-plus-generator.version>
         <dynamic-datasource.version>3.6.1</dynamic-datasource.version>
         <mybatis-plus-join.version>1.4.7</mybatis-plus-join.version>
-        <redisson.version>3.18.0</redisson.version>
+        <redisson.version>3.18.0</redisson.version> <!-- Spring Boot 2.X 最多使用 3.18.0 版本，否则会报 Tuple NoClassDefFoundError -->
         <dm8.jdbc.version>8.1.3.62</dm8.jdbc.version>
         <!-- 消息队列 -->
         <rocketmq-spring.version>2.2.3</rocketmq-spring.version>
@@ -60,6 +60,7 @@
         <jsch.version>0.1.55</jsch.version>
         <tika-core.version>2.7.0</tika-core.version>
         <ip2region.version>2.7.0</ip2region.version>
+        <bizlog-sdk.version>3.0.6</bizlog-sdk.version>
         <!-- 三方云服务相关 -->
         <okio.version>3.5.0</okio.version>
         <okhttp3.version>4.11.0</okhttp3.version>
@@ -92,7 +93,7 @@
                 <version>${revision}</version>
             </dependency>
 
-            <!-- 业务组件 -->
+            <!-- 框架组件 -->
             <dependency>
                 <groupId>cn.econets.boot</groupId>
                 <artifactId>blossom-spring-boot-starter-captcha</artifactId>
@@ -100,12 +101,49 @@
             </dependency>
             <dependency>
                 <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-websocket</artifactId>
+                <artifactId>blossom-spring-boot-starter-excel</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-file</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>cn.econets.boot</groupId>
                 <artifactId>blossom-spring-boot-starter-job</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- 监控相关 -->
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-monitor</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-mq</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-mybatis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- 服务保障相关 -->
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-protection</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-redis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-security</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -115,7 +153,19 @@
             </dependency>
             <dependency>
                 <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-biz-operatelog</artifactId>
+                <artifactId>blossom-spring-boot-starter-web</artifactId>    <!-- Web 相关 -->
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-websocket</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 业务组件 -->
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-biz-data-permission</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -125,22 +175,17 @@
             </dependency>
             <dependency>
                 <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-biz-tenant</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-biz-data-permission</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-biz-sms</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
                 <artifactId>blossom-spring-boot-starter-biz-ip</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-biz-operatelog</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.econets.boot</groupId>
+                <artifactId>blossom-spring-boot-starter-biz-tenant</artifactId>
                 <version>${revision}</version>
             </dependency>
 
@@ -150,25 +195,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-configuration-processor</artifactId>
                 <version>${spring.boot.version}</version>
-            </dependency>
-
-            <!-- Web 相关 -->
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-web</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-security</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-websocket</artifactId>
-                <version>${revision}</version>
             </dependency>
 
             <dependency>
@@ -208,13 +234,8 @@
                 <artifactId>mybatis-plus-join-boot-starter</artifactId> <!-- MyBatis 联表查询 -->
                 <version>${mybatis-plus-join.version}</version>
             </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-mybatis</artifactId>
-                <version>${revision}</version>
-            </dependency>
 
-<!--            redis 相关-->
+            <!-- redis 相关 -->
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
@@ -225,11 +246,6 @@
                         <artifactId>spring-boot-starter-actuator</artifactId>
                     </exclusion>
                 </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-redis</artifactId>
-                <version>${revision}</version>
             </dependency>
 
             <dependency>
@@ -251,19 +267,6 @@
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
                 <version>${rocketmq-spring.version}</version>
             </dependency>
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-mq</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-
-            <!-- 服务保障相关 -->
-<!--            <dependency>-->
-<!--                <groupId>cn.econets.boot</groupId>-->
-<!--                <artifactId>blossom-spring-boot-starter-protection</artifactId>-->
-<!--                <version>${revision}</version>-->
-<!--            </dependency>-->
 
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -286,13 +289,6 @@
                 <groupId>io.github.resilience4j</groupId>
                 <artifactId>resilience4j-spring-boot2</artifactId>
                 <version>${resilience4j.version}</version>
-            </dependency>
-
-            <!-- 监控相关 -->
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-monitor</artifactId>
-                <version>${revision}</version>
             </dependency>
 
             <dependency>
@@ -387,6 +383,7 @@
                 <version>${podam.version}</version>
             </dependency>
 
+            <!-- 工作流相关 -->
             <dependency>
                 <groupId>org.flowable</groupId>
                 <artifactId>flowable-spring-boot-starter-process</artifactId>
@@ -398,12 +395,6 @@
                 <version>${flowable.version}</version>
             </dependency>
             <!-- 工作流相关结束 -->
-
-            <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-excel</artifactId>
-                <version>${revision}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -537,11 +528,6 @@
                 <version>${okhttp3.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.econets.boot</groupId>
-                <artifactId>blossom-spring-boot-starter-file</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.minio</groupId>
                 <artifactId>minio</artifactId>
                 <version>${minio.version}</version>
@@ -620,11 +606,24 @@
                 <artifactId>xercesImpl</artifactId>
                 <version>${xercesImpl.version}</version>
             </dependency>
+
             <!-- SpringBoot Websocket -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-websocket</artifactId>
                 <version>${spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.mouzt</groupId>
+                <artifactId>bizlog-sdk</artifactId>
+                <version>${bizlog-sdk.version}</version>
+                <exclusions>
+                    <exclusion> <!-- 排除掉springboot依赖使用项目的 -->
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
