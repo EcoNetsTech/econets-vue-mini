@@ -22,7 +22,7 @@
     </modules>
 
     <properties>
-        <revision>1.0.1</revision>
+        <revision>1.0.2</revision>
         <!-- Maven 相关 -->
         <java.version>21</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>

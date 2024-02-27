@@ -29,9 +29,9 @@ public class BannerApplicationRunner implements ApplicationRunner {
                             "----------------------------------------------------------",
                     "http://localhost:"+port+"/doc.html");
 
-            // 工作流
-            if (isNotPresent("cn.econets.blossom.framework.flowable.config.FlowableConfiguration")) {
-                System.out.println("[工作流模块 blossom-module-bpm - 已禁用]");
+            // 会员中心
+            if (isNotPresent("cn.econets.blossom.module.member.framework.web.config.MemberWebConfiguration")) {
+                System.out.println("[会员中心模块 blossom-module-member - 已禁用]");
             }
         });
     }

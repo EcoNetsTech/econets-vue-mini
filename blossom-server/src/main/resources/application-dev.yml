@@ -7,10 +7,6 @@ spring:
     import: optional:file:.env/db.properties
 
   # 数据源配置项
-  autoconfigure:
-    exclude:
-      - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure # 排除 Druid 的自动配置，使用 dynamic-datasource-spring-boot-starter 配置多数据源
-      - org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration # 排除积木报表带来的 MongoDB 的自动配置
   datasource:
     druid: # Druid 【监控】相关的全局配置
       web-stat-filter:
@@ -182,10 +178,16 @@ wx: # 参见 https://github.com/Wechat-Group/WxJava/blob/develop/spring-boot-sta
 application:
   access-log: # 访问日志的配置项
     enable: true
+  captcha:
+    enable: false # 本地环境，暂时关闭图片验证码，方便登录等接口的测试；
   error-code: # 错误码相关配置项
     enable: true
+  pay:
+    order-notify-url: http://pay.econets.cn/admin-api/pay/notify/order # 支付渠道的【支付】回调地址
+    refund-notify-url: http://pay.econets.cn/admin-api/pay/notify/refund # 支付渠道的【退款】回调地址
   security:
     mock-enable: true
+  tencent-lbs-key: TVDBZ-TDILD-4ON4B-PFDZA-RNLKH-VVF6E # QQ 地图的密钥 https://lbs.qq.com/service/staticV2/staticGuide/staticDoc
   websocket:
     enable: true # websocket的开关
     path: /infra/ws # 路径
