@@ -53,7 +53,7 @@ public class ${sceneEnum.prefixClass}${table.className}Controller {
         return success(${classNameVar}Service.create${simpleClassName}(createReqVO));
     }
 
-    @PutMapping("/update")
+    @PostMapping("/update")
     @Operation(summary = "更新${table.classComment}")
 #if ($sceneEnum.scene == 1)
     @PreAuthorize("@ss.hasPermission('${permissionPrefix}:update')")
@@ -63,7 +63,7 @@ public class ${sceneEnum.prefixClass}${table.className}Controller {
         return success(true);
     }
 
-    @DeleteMapping("/delete")
+    @GetMapping("/delete")
     @Operation(summary = "删除${table.classComment}")
     @Parameter(name = "id", description = "编号", required = true)
 #if ($sceneEnum.scene == 1)
@@ -197,7 +197,7 @@ public class ${sceneEnum.prefixClass}${table.className}Controller {
         return success(${classNameVar}Service.create${subSimpleClassName}(${subClassNameVar}));
     }
 
-    @PutMapping("/${subSimpleClassName_strikeCase}/update")
+    @PostMapping("/${subSimpleClassName_strikeCase}/update")
     @Operation(summary = "更新${subTable.classComment}")
 #if ($sceneEnum.scene == 1)
     @PreAuthorize("@ss.hasPermission('${permissionPrefix}:update')")
@@ -207,7 +207,7 @@ public class ${sceneEnum.prefixClass}${table.className}Controller {
         return success(true);
     }
 
-    @DeleteMapping("/${subSimpleClassName_strikeCase}/delete")
+    @GetMapping("/${subSimpleClassName_strikeCase}/delete")
     @Parameter(name = "id", description = "编号", required = true)
     @Operation(summary = "删除${subTable.classComment}")
 #if ($sceneEnum.scene == 1)

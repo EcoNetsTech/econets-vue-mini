@@ -721,13 +721,6 @@ CREATE TABLE `infra_file_config` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='文件配置表';
 
--- ----------------------------
--- Records of infra_file_config
--- ----------------------------
-BEGIN;
-INSERT INTO `infra_file_config` (`id`, `name`, `storage`, `remark`, `master`, `config`, `creator`, `create_time`, `updater`, `update_time`, `deleted`) VALUES (4, '数据库', 1, '我是数据库', b'1', '{\"@class\":\"cn.econets.blossom.framework.file.core.client.db.DBFileClientConfig\",\"domain\":\"http://127.0.0.1:58080\"}', '1', '2022-03-15 23:56:24', '1', '2023-12-30 18:57:13', b'0');
-INSERT INTO `infra_file_config` (`id`, `name`, `storage`, `remark`, `master`, `config`, `creator`, `create_time`, `updater`, `update_time`, `deleted`) VALUES (18, '析木阿里云oss', 20, '析木阿里云oss', b'0', '{\"@class\":\"cn.econets.blossom.framework.file.core.client.s3.S3FileClientConfig\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\",\"domain\":\"https://oss.ximu233.com\",\"bucket\":\"ximu233\",\"hostFolder\":\"econets-vue\",\"accessKey\":\"1\",\"accessSecret\":\"1\"}', '1', '2023-12-30 18:19:36', '1', '2024-01-09 23:23:25', b'0');
-COMMIT;
 
 -- ----------------------------
 -- Table structure for infra_file_content
