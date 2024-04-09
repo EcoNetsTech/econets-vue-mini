@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import java.util.*;
 import ${jakartaPackage}.validation.*;
+import javax.validation.constraints.NotNull;
 ## 处理 BigDecimal 字段的引入
 import java.util.*;
 #foreach ($column in $columns)
